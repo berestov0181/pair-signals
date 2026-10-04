@@ -3,7 +3,7 @@
   "winrate": 100,
   "pnl": 694.99,
   "balance": 10226.72,
-  "updated": "2026-10-05 03:33 UTC",
+  "updated": "2026-10-05 03:38 UTC",
   "signals": [
     {
       "pair": "ARB/TIA",
@@ -27,42 +27,6 @@
       "pair": "AAVE/MKR",
       "z": -4.0,
       "direction": "Sell AAVE / Buy MKR",
-      "mode": "NEWS"
-    },
-    {
-      "pair": "UNI/1INCH",
-      "z": -4.0,
-      "direction": "Sell UNI / Buy 1INCH",
-      "mode": "NEWS"
-    },
-    {
-      "pair": "AAVE/MKR",
-      "z": -4.0,
-      "direction": "Sell AAVE / Buy MKR",
-      "mode": "NEWS"
-    },
-    {
-      "pair": "SOL/AVAX",
-      "z": -4.0,
-      "direction": "Sell SOL / Buy AVAX",
-      "mode": "NEWS"
-    },
-    {
-      "pair": "UNI/1INCH",
-      "z": -4.0,
-      "direction": "Sell UNI / Buy 1INCH",
-      "mode": "NEWS"
-    },
-    {
-      "pair": "AAVE/MKR",
-      "z": -4.0,
-      "direction": "Sell AAVE / Buy MKR",
-      "mode": "NEWS"
-    },
-    {
-      "pair": "SOL/AVAX",
-      "z": -4.0,
-      "direction": "Sell SOL / Buy AVAX",
       "mode": "NEWS"
     }
   ],
