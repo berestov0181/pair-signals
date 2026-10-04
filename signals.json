@@ -1,0 +1,101 @@
+{
+  "trades": 6,
+  "winrate": 100,
+  "pnl": 694.99,
+  "balance": 10226.72,
+  "updated": "2026-10-05 03:33 UTC",
+  "signals": [
+    {
+      "pair": "ARB/TIA",
+      "z": -2.98,
+      "direction": "Buy ARB / Sell TIA",
+      "mode": "FLAT"
+    },
+    {
+      "pair": "ATOM/OP",
+      "z": -2.8,
+      "direction": "Buy ATOM / Sell OP",
+      "mode": "FLAT"
+    },
+    {
+      "pair": "UNI/1INCH",
+      "z": -4.0,
+      "direction": "Sell UNI / Buy 1INCH",
+      "mode": "NEWS"
+    },
+    {
+      "pair": "AAVE/MKR",
+      "z": -4.0,
+      "direction": "Sell AAVE / Buy MKR",
+      "mode": "NEWS"
+    },
+    {
+      "pair": "UNI/1INCH",
+      "z": -4.0,
+      "direction": "Sell UNI / Buy 1INCH",
+      "mode": "NEWS"
+    },
+    {
+      "pair": "AAVE/MKR",
+      "z": -4.0,
+      "direction": "Sell AAVE / Buy MKR",
+      "mode": "NEWS"
+    },
+    {
+      "pair": "SOL/AVAX",
+      "z": -4.0,
+      "direction": "Sell SOL / Buy AVAX",
+      "mode": "NEWS"
+    },
+    {
+      "pair": "UNI/1INCH",
+      "z": -4.0,
+      "direction": "Sell UNI / Buy 1INCH",
+      "mode": "NEWS"
+    },
+    {
+      "pair": "AAVE/MKR",
+      "z": -4.0,
+      "direction": "Sell AAVE / Buy MKR",
+      "mode": "NEWS"
+    },
+    {
+      "pair": "SOL/AVAX",
+      "z": -4.0,
+      "direction": "Sell SOL / Buy AVAX",
+      "mode": "NEWS"
+    }
+  ],
+  "history": [
+    {
+      "pair": "ATOM/TIA",
+      "pnl": 103.95,
+      "balance": 10226.72
+    },
+    {
+      "pair": "ATOM/TIA",
+      "pnl": 95.75,
+      "balance": 10095.75
+    },
+    {
+      "pair": "ATOM/TIA",
+      "pnl": 97.33,
+      "balance": 10097.33
+    },
+    {
+      "pair": "AVAX/CRV",
+      "pnl": 122.78,
+      "balance": 10122.78
+    },
+    {
+      "pair": "OP/SOL",
+      "pnl": 126.31,
+      "balance": 10126.31
+    },
+    {
+      "pair": "OP/SOL",
+      "pnl": 148.88,
+      "balance": 10148.88
+    }
+  ]
+}
