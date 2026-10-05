@@ -3,41 +3,61 @@
 <meta http-equiv="refresh" content="300">
 <title>Pair Signal Hunter</title>
 <style>
-body{font-family:monospace;background:#111;color:#0f0;padding:20px;max-width:800px;margin:0 auto}
-h1{color:#ff0}h2{color:#0af}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:monospace;background:#0a0a0a;color:#e0e0e0;padding:20px;max-width:900px;margin:0 auto}
+h1{color:#ffd700;font-size:24px;margin:20px 0 5px}
+h2{color:#00aaff;font-size:16px;margin:20px 0 10px;border-bottom:1px solid #222;padding-bottom:5px}
+p{color:#888;margin-bottom:15px;line-height:1.6}
 table{border-collapse:collapse;width:100%;margin-bottom:20px}
-td,th{border:1px solid #333;padding:8px;text-align:left}
-th{background:#222}.pos{color:#0f0}.neg{color:#f00}.news{color:#ff0}
-.badge{background:#0af;color:#000;padding:2px 6px;border-radius:3px;font-size:12px}
+td,th{border:1px solid #222;padding:10px;text-align:left}
+th{background:#111;color:#aaa;font-size:12px}
+.pos{color:#00ff88}.neg{color:#ff4444}.news{color:#ffd700}
+.stat{display:inline-block;background:#111;border:1px solid #222;padding:15px 25px;margin:5px;border-radius:5px;text-align:center}
+.stat-val{font-size:28px;font-weight:bold;color:#00ff88}
+.stat-lbl{font-size:11px;color:#666;margin-top:3px}
+.step{background:#111;border-left:3px solid #00aaff;padding:12px 15px;margin:8px 0}
+.step-num{color:#00aaff;font-weight:bold}
+.warn{background:#1a1a00;border:1px solid #444;padding:10px;border-radius:5px;color:#888;font-size:12px;margin-top:20px}
+.btn{display:inline-block;background:#1f6feb;color:#fff;padding:10px 20px;border-radius:5px;text-decoration:none;font-family:monospace;margin:5px}
 </style></head><body>
 <h1>🎯 Pair Signal Hunter</h1>
-<p>Автоматическая парная торговля | Bybit Futures</p>
-<div id="data"><p>Загрузка...</p></div>
+<p>Автоматическая система парного арбитража на Bybit Futures. Обновляется каждый час.</p>
+<div>
+<div class="stat"><div class="stat-val" id="v-trades">-</div><div class="stat-lbl">СДЕЛОК</div></div>
+<div class="stat"><div class="stat-val" id="v-wr">-</div><div class="stat-lbl">WINRATE</div></div>
+<div class="stat"><div class="stat-val" id="v-pnl">-</div><div class="stat-lbl">P&amp;L</div></div>
+<div class="stat"><div class="stat-val" id="v-bal">-</div><div class="stat-lbl">БАЛАНС</div></div>
+</div>
+<h2>🔴 Активные сигналы</h2>
+<table><tr><th>ПАРА</th><th>Z-SCORE</th><th>НАПРАВЛЕНИЕ</th><th>ТИП</th></tr>
+<tbody id="signals"><tr><td colspan=4>Загрузка...</td></tr></tbody></table>
+<h2>📋 История сделок</h2>
+<table><tr><th>ПАРА</th><th>P&amp;L</th><th>БАЛАНС</th></tr>
+<tbody id="history"></tbody></table>
+<h2>📌 Как следовать сигналам</h2>
+<div class="step"><span class="step-num">1.</span> Откройте Bybit Futures</div>
+<div class="step"><span class="step-num">2.</span> Найдите пару из таблицы выше</div>
+<div class="step"><span class="step-num">3.</span> Откройте позицию в указанном направлении (5-10% депозита)</div>
+<div class="step"><span class="step-num">4.</span> Закройте когда z-score вернётся к 0 (обычно 1-48 часов)</div>
+<h2>⭐ Следить за обновлениями</h2>
+<a class="btn" href="https://github.com/berestov0181/pair-signals">⭐ Watch на GitHub</a>
+<div class="warn">⚠️ Демо-счёт $10,000. Не является финансовой рекомендацией.</div>
+<p style="margin-top:10px;font-size:11px;color:#333">Обновлено: <span id="updated">-</span></p>
 <script>
-fetch('signals.json?t='+Date.now())
-.then(r=>r.json()).then(d=>{
-  let h = '<h2>📊 Статистика Bot-B</h2>'
-  h += '<table><tr><th>Сделок</th><th>Winrate</th><th>P&L</th><th>Баланс</th><th>Обновлено</th></tr>'
-  h += '<tr><td>'+d.trades+'</td><td>'+d.winrate+'%</td>'
-  h += '<td class="'+(d.pnl>0?'pos':'neg')+'">'+d.pnl+'</td>'
-  h += '<td>$'+d.balance+'</td><td>'+d.updated+'</td></tr></table>'
-  h += '<h2>🔴 Активные сигналы</h2>'
-  h += '<table><tr><th>Пара</th><th>Z-score</th><th>Направление</th><th>Тип</th></tr>'
-  d.signals.forEach(s=>{
-    h += '<tr><td><b>'+s.pair+'</b></td>'
-    h += '<td class="'+(s.mode=='NEWS'?'news':'pos')+'">'+s.z+'</td>'
-    h += '<td>'+s.direction+'</td>'
-    h += '<td><span class="badge">'+s.mode+'</span></td></tr>'
-  })
-  h += '</table><h2>📋 Последние сделки</h2>'
-  h += '<table><tr><th>Пара</th><th>P&L</th><th>Баланс</th></tr>'
-  d.history.forEach(t=>{
-    h += '<tr><td>'+t.pair+'</td>'
-    h += '<td class="'+(t.pnl>0?'pos':'neg')+'">'+t.pnl+'</td>'
-    h += '<td>$'+t.balance+'</td></tr>'
-  })
-  h += '</table>'
-  document.getElementById('data').innerHTML = h
-}).catch(e=>document.getElementById('data').innerHTML='<p>Нет данных</p>')
-</script>
-</body></html>
+fetch('signals.json?t='+Date.now()).then(function(r){return r.json()}).then(function(d){
+document.getElementById('v-trades').textContent=d.trades;
+document.getElementById('v-wr').textContent=d.winrate+'%';
+document.getElementById('v-pnl').textContent=(d.pnl>0?'+':'')+d.pnl;
+document.getElementById('v-pnl').className='stat-val '+(d.pnl>0?'pos':'neg');
+document.getElementById('v-bal').textContent=d.balance;
+document.getElementById('updated').textContent=d.updated;
+var sr='';d.signals.forEach(function(s){
+sr+='<tr><td><b>'+s.pair+'</b></td><td class="'+(s.mode=='NEWS'?'news':'pos')+'">'+s.z+'</td><td>'+s.direction+'</td><td>'+s.mode+'</td></tr>';
+});
+document.getElementById('signals').innerHTML=sr||'<tr><td colspan=4>Нет сигналов</td></tr>';
+var hr='';d.history.forEach(function(t){
+hr+='<tr><td>'+t.pair+'</td><td class="'+(t.pnl>0?'pos':'neg')+'">'+(t.pnl>0?'+':'')+t.pnl+'</td><td>$'+t.balance+'</td></tr>';
+});
+document.getElementById('history').innerHTML=hr;
+}).catch(function(){});
+</script></body></html>
