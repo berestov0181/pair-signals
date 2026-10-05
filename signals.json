@@ -3,25 +3,25 @@
   "winrate": 100,
   "pnl": 807.61,
   "balance": 10112.62,
-  "updated": "2026-10-05 16:50 UTC",
+  "updated": "2026-10-05 17:50 UTC",
   "signals": [
     {
-      "pair": "ARB/TIA",
-      "z": -2.98,
-      "direction": "Buy ARB / Sell TIA",
-      "mode": "FLAT"
+      "pair": "1INCH/BTC",
+      "z": -11595.58,
+      "direction": "Buy 1INCH / Sell BTC",
+      "mode": "BULL"
     },
     {
-      "pair": "ATOM/OP",
-      "z": -2.8,
-      "direction": "Buy ATOM / Sell OP",
-      "mode": "FLAT"
+      "pair": "1INCH/ETH",
+      "z": -7864.48,
+      "direction": "Buy 1INCH / Sell ETH",
+      "mode": "BULL"
     },
     {
-      "pair": "ARB/AVAX",
-      "z": 2.07,
-      "direction": "Sell ARB / Buy AVAX",
-      "mode": "FLAT"
+      "pair": "INJ/UNI",
+      "z": -1370.61,
+      "direction": "Buy INJ / Sell UNI",
+      "mode": "BULL"
     },
     {
       "pair": "UNI/1INCH",
