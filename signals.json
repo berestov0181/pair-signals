@@ -1,9 +1,9 @@
 {
-  "trades": 6,
+  "trades": 7,
   "winrate": 100,
-  "pnl": 694.99,
-  "balance": 10226.72,
-  "updated": "2026-10-05 16:29 UTC",
+  "pnl": 807.61,
+  "balance": 10112.62,
+  "updated": "2026-10-05 16:50 UTC",
   "signals": [
     {
       "pair": "ARB/TIA",
@@ -37,6 +37,11 @@
     }
   ],
   "history": [
+    {
+      "pair": "UNI/1INCH",
+      "pnl": 112.62,
+      "balance": 10112.62
+    },
     {
       "pair": "ATOM/TIA",
       "pnl": 103.95,
