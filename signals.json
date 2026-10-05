@@ -1,9 +1,9 @@
 {
-  "trades": 10,
+  "trades": 11,
   "winrate": 100,
-  "pnl": 1126.98,
-  "balance": 10431.99,
-  "updated": "2026-10-05 21:41 UTC",
+  "pnl": 1232.29,
+  "balance": 10537.3,
+  "updated": "2026-10-05 22:41 UTC",
   "signals": [
     {
       "pair": "ATOM/UNI",
@@ -37,6 +37,11 @@
     }
   ],
   "history": [
+    {
+      "pair": "ATOM/OP",
+      "pnl": 105.31,
+      "balance": 10537.3
+    },
     {
       "pair": "ATOM/OP",
       "pnl": 112.97,
@@ -81,11 +86,6 @@
       "pair": "OP/SOL",
       "pnl": 126.31,
       "balance": 10126.31
-    },
-    {
-      "pair": "OP/SOL",
-      "pnl": 148.88,
-      "balance": 10148.88
     }
   ]
 }
