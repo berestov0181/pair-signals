@@ -1,9 +1,9 @@
 {
-  "trades": 11,
+  "trades": 12,
   "winrate": 100,
-  "pnl": 1232.29,
-  "balance": 10537.3,
-  "updated": "2026-10-05 22:41 UTC",
+  "pnl": 1343.21,
+  "balance": 10648.22,
+  "updated": "2026-10-05 23:41 UTC",
   "signals": [
     {
       "pair": "ATOM/UNI",
@@ -18,10 +18,10 @@
       "mode": "FLAT"
     },
     {
-      "pair": "ATOM/OP",
-      "z": -2.8,
-      "direction": "Buy ATOM / Sell OP",
-      "mode": "FLAT"
+      "pair": "ARB/ATOM",
+      "z": -2.9,
+      "direction": "Buy ARB / Sell ATOM",
+      "mode": "BULL"
     },
     {
       "pair": "UNI/1INCH",
@@ -37,6 +37,11 @@
     }
   ],
   "history": [
+    {
+      "pair": "ATOM/OP",
+      "pnl": 110.92,
+      "balance": 10648.22
+    },
     {
       "pair": "ATOM/OP",
       "pnl": 105.31,
@@ -81,11 +86,6 @@
       "pair": "AVAX/CRV",
       "pnl": 122.78,
       "balance": 10122.78
-    },
-    {
-      "pair": "OP/SOL",
-      "pnl": 126.31,
-      "balance": 10126.31
     }
   ]
 }
