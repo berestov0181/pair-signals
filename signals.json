@@ -3,8 +3,14 @@
   "winrate": 100,
   "pnl": 1126.98,
   "balance": 10431.99,
-  "updated": "2026-10-05 19:41 UTC",
+  "updated": "2026-10-05 20:41 UTC",
   "signals": [
+    {
+      "pair": "ATOM/UNI",
+      "z": 3.08,
+      "direction": "Sell ATOM / Buy UNI",
+      "mode": "BEAR"
+    },
     {
       "pair": "ARB/TIA",
       "z": -2.98,
@@ -15,12 +21,6 @@
       "pair": "ATOM/OP",
       "z": -2.8,
       "direction": "Buy ATOM / Sell OP",
-      "mode": "FLAT"
-    },
-    {
-      "pair": "ARB/AVAX",
-      "z": 2.07,
-      "direction": "Sell ARB / Buy AVAX",
       "mode": "FLAT"
     },
     {
