@@ -1,9 +1,9 @@
 {
-  "trades": 9,
+  "trades": 10,
   "winrate": 100,
-  "pnl": 1014.01,
-  "balance": 10319.02,
-  "updated": "2026-10-05 18:41 UTC",
+  "pnl": 1126.98,
+  "balance": 10431.99,
+  "updated": "2026-10-05 19:41 UTC",
   "signals": [
     {
       "pair": "ARB/TIA",
@@ -37,6 +37,11 @@
     }
   ],
   "history": [
+    {
+      "pair": "ATOM/OP",
+      "pnl": 112.97,
+      "balance": 10431.99
+    },
     {
       "pair": "SOL/AVAX",
       "pnl": 110.15,
