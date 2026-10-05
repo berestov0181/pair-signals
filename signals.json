@@ -1,9 +1,9 @@
 {
-  "trades": 12,
-  "winrate": 100,
-  "pnl": 1343.21,
-  "balance": 10000.0,
-  "updated": "2026-10-06 01:56 UTC",
+  "trades": 18,
+  "winrate": 83,
+  "pnl": 1357.61,
+  "balance": 10011.57,
+  "updated": "2026-10-06 02:56 UTC",
   "signals": [
     {
       "pair": "ATOM/UNI",
@@ -38,6 +38,36 @@
   ],
   "history": [
     {
+      "pair": "ARB/AVAX",
+      "pnl": 11.57,
+      "balance": 10011.57
+    },
+    {
+      "pair": "SOL/AVAX",
+      "pnl": -2.16,
+      "balance": 10002.83
+    },
+    {
+      "pair": "AAVE/MKR",
+      "pnl": -1.2,
+      "balance": 10004.98
+    },
+    {
+      "pair": "UNI/1INCH",
+      "pnl": -0.77,
+      "balance": 10006.18
+    },
+    {
+      "pair": "ATOM/OP",
+      "pnl": 4.95,
+      "balance": 10006.95
+    },
+    {
+      "pair": "ARB/TIA",
+      "pnl": 2.0,
+      "balance": 10002.0
+    },
+    {
       "pair": "ATOM/OP",
       "pnl": 110.92,
       "balance": 10648.22
@@ -56,36 +86,6 @@
       "pair": "SOL/AVAX",
       "pnl": 110.15,
       "balance": 10319.02
-    },
-    {
-      "pair": "ARB/TIA",
-      "pnl": 96.25,
-      "balance": 10208.87
-    },
-    {
-      "pair": "UNI/1INCH",
-      "pnl": 112.62,
-      "balance": 10112.62
-    },
-    {
-      "pair": "ATOM/TIA",
-      "pnl": 103.95,
-      "balance": 10226.72
-    },
-    {
-      "pair": "ATOM/TIA",
-      "pnl": 95.75,
-      "balance": 10095.75
-    },
-    {
-      "pair": "ATOM/TIA",
-      "pnl": 97.33,
-      "balance": 10097.33
-    },
-    {
-      "pair": "AVAX/CRV",
-      "pnl": 122.78,
-      "balance": 10122.78
     }
   ]
 }
