@@ -1,4 +1,6 @@
-# Pair Signal Hunter
+# pair-signals
+
+**Pair Signal Hunter**
 
 Автоматическая система парного арбитража на Bybit Futures.
 
@@ -6,13 +8,13 @@
 
 | Сделок | Winrate | P&L | Баланс |
 |--------|---------|-----|--------|
-| 7 | 100% | +$1,014 | $11,014 |
+| 18 | 83% | +$1,357.61 | $10,011.57 |
 
 ## Живые сигналы
 
 https://berestov0181.github.io/pair-signals
 
-Обновляется каждый час автоматически.
+Обновляется каждые **5 минут** автоматически.
 
 ## Как работает
 
@@ -30,9 +32,11 @@ https://berestov0181.github.io/pair-signals
 
 ## Стек
 
-- Python 3.14 + Bybit API
+- Python 3.12 / 3.13 + Bybit API
 - O1Engine v3.1 (rolling OLS, O(1) complexity)
 - News trigger (CoinTelegraph)
 - GitHub Pages
 
-Не является финансовой рекомендацией.
+---
+
+*Не является финансовой рекомендацией.*
